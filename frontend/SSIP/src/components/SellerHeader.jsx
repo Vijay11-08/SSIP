@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const UserHeader = () => {
+const SellerHeader = () => {
     return (
       <div>
         <h2>UserHeader</h2>
@@ -8,5 +8,4 @@ const UserHeader = () => {
     );
   };
   
-  export default UserHeader;
-  
+  export default SellerHeader;

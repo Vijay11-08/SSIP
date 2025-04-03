@@ -1,13 +1,12 @@
 import * as React from "react";
 
-
-const AdminIndex = () => {
+const AdminHeader = () => {
     return (
       <div>
-        <h2>Admin Index</h2>
+        <h2>UserHeader</h2>
       </div>
     );
   };
   
-  export default AdminIndex;
+  export default AdminHeader;
   

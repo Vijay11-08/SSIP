@@ -1,19 +1,19 @@
 import * as React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Dashboard from "../pages/admin/Dashboard";
-import AdminIndex from "../pages/admin/AdminIndex";
-
+import AdminDashboard from "../pages/admin/AdminDashboard";
+import AdminHeader from "../components/AdminHeader";
+import AdminFooter from "../components/AdminFooter";
 const UserRoutes = () => { 
     return(
-       <Router>
-            <div>
-                <Routes>
-                    <Route path="/" element={<Dashboard />} />
-                    <Route path="/AdminIndex" element={<AdminIndex/>}/>
-                    
-                </Routes>
-            </div>
+        <Router>
+        <AdminHeader />
+        <main>
+            <Routes>
+                    <Route path="/AdminDashboard" element={<AdminDashboard />} />
+                    </Routes>
+            </main>
+            <AdminFooter />
         </Router>
     );
 };
