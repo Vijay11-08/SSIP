@@ -4,62 +4,59 @@ Since you want to create both **Frontend (React)** and **Backend (Node.js with E
 
 ## **📂 Full-Stack File Structure (React + Node.js/Express)**
 ```
-tribal-art-platform/
-│── 📂 backend/               # Backend (Node.js + Express or ASP.NET Core)
-│   ├── 📂 config/            # Configuration files (DB connection, env settings)
-│   │   ├── db.js             # Database connection setup
-│   │   ├── auth.js           # Authentication middleware
-│   ├── 📂 controllers/       # Business logic (handling API requests)
-│   │   ├── userController.js
-│   │   ├── productController.js
-│   │   ├── orderController.js
-│   ├── 📂 models/            # Database models (Schemas for MongoDB/PostgreSQL)
-│   │   ├── User.js
-│   │   ├── Product.js
-│   │   ├── Order.js
-│   ├── 📂 routes/            # API endpoints (Routing)
-│   │   ├── userRoutes.js
-│   │   ├── productRoutes.js
-│   │   ├── orderRoutes.js
-│   ├── 📂 middleware/        # Middleware (auth, validation, error handling)
-│   │   ├── authMiddleware.js
-│   │   ├── errorHandler.js
-│   ├── 📂 utils/             # Utility functions (helpers, email, etc.)
-│   ├── 📂 public/            # Static assets (images, uploads)
-│   ├── server.js             # Main entry point for backend (Express Server)
-│   ├── package.json          # Backend dependencies
-│   ├── .env                  # Environment variables
-│
-│── 📂 frontend/              # Frontend (React.js)
-│   ├── 📂 public/            # Public assets (index.html, favicon, images)
-│   ├── 📂 src/               # Main React app
-│   │   ├── 📂 components/    # Reusable UI components
+project_root/
+│── frontend/  # React App
+│   │── src/
+│   │   │── components/
 │   │   │   ├── Navbar.js
 │   │   │   ├── Footer.js
-│   │   │   ├── Card.js
-│   │   │   ├── Button.js
-│   │   ├── 📂 pages/        # Individual pages
-│   │   │   ├── Home.js
-│   │   │   ├── Shop.js
-│   │   │   ├── ProductDetail.js
-│   │   │   ├── Cart.js
-│   │   │   ├── Checkout.js
-│   │   │   ├── AdminDashboard.js
-│   │   ├── 📂 redux/        # Redux store & slices
-│   │   │   ├── store.js
-│   │   │   ├── userSlice.js
-│   │   │   ├── productSlice.js
-│   │   ├── 📂 services/     # API calls using Axios
+│   │   │   ├── Sidebar.js
+│   │   │── pages/
+│   │   │   ├── User/
+│   │   │   │   ├── UserHome.js
+│   │   │   │   ├── ProductDetails.js
+│   │   │   │   ├── Cart.js
+│   │   │   │   ├── Checkout.js
+│   │   │   ├── Seller/
+│   │   │   │   ├── SellerDashboard.js
+│   │   │   │   ├── AddProduct.js
+│   │   │   │   ├── ManageProducts.js
+│   │   │   │   ├── Orders.js
+│   │   │   ├── Admin/
+│   │   │   │   ├── AdminDashboard.js
+│   │   │   │   ├── ManageUsers.js
+│   │   │   │   ├── ManageSellers.js
+│   │   │   │   ├── ManageProducts.js
+│   │   │── context/
+│   │   │   ├── AuthContext.js
+│   │   │   ├── CartContext.js
+│   │   │── services/
 │   │   │   ├── api.js
-│   │   ├── 📂 assets/       # Images, icons, fonts
-│   │   ├── App.js          # Main React Component
-│   │   ├── index.js        # Entry point
-│   ├── package.json        # Frontend dependencies
-│   ├── .env                # Frontend environment variables
-│
-│── 📂 docs/                 # Documentation (APIs, setup guides)
-│── README.md                # Project Overview
-│── .gitignore               # Files to ignore in Git
+│   │   │── App.js
+│   │   │── index.js
+│── backend/  # Node.js/Express App
+│   │── src/
+│   │   │── controllers/
+│   │   │   ├── authController.js
+│   │   │   ├── productController.js
+│   │   │   ├── orderController.js
+│   │   │── models/
+│   │   │   ├── User.js
+│   │   │   ├── Seller.js
+│   │   │   ├── Product.js
+│   │   │   ├── Order.js
+│   │   │── routes/
+│   │   │   ├── authRoutes.js
+│   │   │   ├── productRoutes.js
+│   │   │   ├── orderRoutes.js
+│   │   │── middleware/
+│   │   │   ├── authMiddleware.js
+│   │   │── config/
+│   │   │   ├── db.js
+│   │   │── index.js
+│── package.json
+│── .gitignore
+│── README.md
 ```
 
 ---
